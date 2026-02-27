@@ -8,7 +8,7 @@ namespace COMP003A.Final
     {
         string Name;
 
-        string Class;
+        string Classes;
 
         string Species;
 
@@ -17,5 +17,20 @@ namespace COMP003A.Final
         int MP;
 
         int Level;
+
+        public CharacterCreation(string name, string classes, string species, int health, int mp, int level)
+        {
+            Name = name;
+
+            Classes = classes;
+
+            Species = species;
+
+            Health = health;
+
+            MP = mp;
+
+            Level = level;
+        }
     }
 }
