@@ -4,13 +4,36 @@
     {
         static void Main(string[] args)
         {
-            bool running = true;
 
-            MenuDisplay();
+            bool running = true;
 
             while (running)
             {
-                Console.ReadLine();
+                MenuDisplay();
+                string userInput = Console.ReadLine();
+
+                switch (userInput)
+                {
+                    case "1":
+                        Console.WriteLine("Create Character Selected.");
+                        break;
+                    case "2":
+                        Console.WriteLine("View all characters selected.");
+                        break;
+                    case "3":
+                        Console.WriteLine("View Character Stats Selected.");
+                        break;
+                    case "4":
+                        Console.WriteLine("Remove Character Selected.");
+                        break;
+                    case "5":
+                        Console.WriteLine("Exiting Program.");
+                        running = false;
+                        break;
+                    default:
+                        Console.WriteLine("Invalid input, please try again.");
+                        break;
+                }
             }
         }
         static void MenuDisplay()
