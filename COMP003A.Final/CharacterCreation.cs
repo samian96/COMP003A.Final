@@ -32,5 +32,19 @@ namespace COMP003A.Final
 
             Level = level;
         }
+        public void DisplayCharacter()
+        {
+            Console.WriteLine("Name: " + Name);
+
+            Console.WriteLine("Class: " + Classes);
+
+            Console.WriteLine("Species: " + Species);
+
+            Console.WriteLine("Health: " + Health);
+
+            Console.WriteLine("MP: " + MP);
+
+            Console.WriteLine("Level: " + Level);
+        }
     }
 }
