@@ -16,7 +16,8 @@
         static void MenuDisplay()
         {
             Console.WriteLine("Character Creation Menu:");
-            Console.Write("1. Create Character: \n 2. View All Characters: \n 3: View Character Stats: \n Remove Character: \n Exit Program.");
+            Console.WriteLine("1. Create Character: \n2. View All Characters: \n3: View Character Stats: \nRemove Character: \nExit Program:");
+            Console.Write("Choose an option: ");
         }
     }
 }
