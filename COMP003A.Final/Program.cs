@@ -16,6 +16,7 @@
                 {
                     case "1":
                         Console.WriteLine("Create Character Selected.");
+                        Case1();
                         break;
                     case "2":
                         Console.WriteLine("View all characters selected.");
@@ -61,7 +62,33 @@
             Console.WriteLine("3. Stealth");
             Console.Write("Please Enter Class Number: ");
 
-            string charClass = Console.ReadLine()?.Trim();
+            string charChoice = Console.ReadLine()?.Trim();
+
+            string charClasses; 
+
+            switch (charChoice)
+            {
+                case "1":
+                    charClasses = "Fighter";
+                    break;
+                case "2":
+                    charClasses = "Mage";
+                    break;
+                case "3":
+                    charClasses = "Stealth";
+                    break;
+                default:
+                    Console.WriteLine("\n Invalid choice. Please try again.");
+                    Console.ReadLine();
+                    return;
+            }
+            // success path
+            Console.WriteLine("\n Character created.");
+            Console.WriteLine($"Name: {charName}\nClass: {charClasses}");
+
+            Console.WriteLine("Press enter to return to menu...");
+            Console.ReadLine();
+
         }
     }
 }
