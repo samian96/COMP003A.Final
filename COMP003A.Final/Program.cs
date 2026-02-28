@@ -55,7 +55,13 @@
                 Console.WriteLine("Invalid name, name requires one character, returning to menu.");
                 return;
             }
+            Console.WriteLine("\nChoose a class:");
+            Console.WriteLine("1. Fighter");
+            Console.WriteLine("2. Mage");
+            Console.WriteLine("3. Stealth");
+            Console.Write("Please Enter Class Number: ");
 
+            string charClass = Console.ReadLine()?.Trim();
         }
     }
 }
