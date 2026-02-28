@@ -10,7 +10,7 @@
             while (running)
             {
                 MenuDisplay();
-                string userInput = Console.ReadLine();
+                string userInput = Console.ReadLine()?.Trim(); ;
 
                 switch (userInput)
                 {
@@ -41,6 +41,15 @@
             Console.WriteLine("Character Creation Menu:");
             Console.WriteLine("1. Create Character: \n2. View All Characters: \n3: View Character Stats: \nRemove Character: \nExit Program:");
             Console.Write("Choose an option: ");
+        }
+        static void Case1()
+        {
+            Console.Clear();
+            Console.WriteLine("Creating New Character");
+
+            Console.Write("Please enter your characters name: ");
+            Console.ReadLine()?.Trim();
+
         }
     }
 }
