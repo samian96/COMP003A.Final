@@ -48,7 +48,13 @@
             Console.WriteLine("Creating New Character");
 
             Console.Write("Please enter your characters name: ");
-            Console.ReadLine()?.Trim();
+            string charName = Console.ReadLine()?.Trim();
+
+            if (string.IsNullOrEmpty(charName))
+            {
+                Console.WriteLine("Invalid name, name requires one character, returning to menu.");
+                return;
+            }
 
         }
     }
