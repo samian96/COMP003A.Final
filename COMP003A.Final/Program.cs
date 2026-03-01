@@ -76,6 +76,32 @@ namespace COMP003A.Final
             {
                 species = "Unknown";
             }
+            Console.WriteLine();
+            Console.Write("Enter Characters age: ");
+            string charAge = Console.ReadLine()?.Trim();
+
+            if (charAge == "" || charAge == null)
+            {
+                charAge = "Unkown";
+            }
+
+            Console.WriteLine();
+            Console.Write("Enter characters gender: ");
+            string charGender = Console.ReadLine()?.Trim();
+
+            if (charAge == "" || charAge == null)
+            {
+                charAge = "Unknown";
+            }
+
+            Console.WriteLine();
+            Console.Write("Enter characters hair color: ");
+            string charHair = Console.ReadLine()?.Trim();
+
+            if (charHair == "" || charHair == null)
+            {
+                charHair = "Bald";
+            } 
 
             Console.WriteLine("");
             Console.WriteLine("Choose your class");
