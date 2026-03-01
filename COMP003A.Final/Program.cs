@@ -32,6 +32,7 @@ namespace COMP003A.Final
                         break;
                     case "4":
                         Console.WriteLine("Remove Character Selected.");
+                        RemoveCharacter();
                         break;
                     case "5":
                         Console.WriteLine("Exiting Program.");
@@ -228,6 +229,14 @@ namespace COMP003A.Final
                 Console.WriteLine("Character: " + nameRemove + "Has been deleted.");
                 break;
             }
+            if (found == false)
+            {
+                Console.WriteLine("\nCharacter: " + nameRemove + "was not found.");
+                Console.WriteLine("Use option 2 to view all charaacters and check spelling.");
+            }
+            Console.WriteLine("");
+            Console.WriteLine("Press enter to continue.");
+            Console.ReadLine();
         }
     }
 }
