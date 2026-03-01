@@ -6,6 +6,15 @@ namespace COMP003A.Final
     {
         private static List<CharacterCreation> character = new List<CharacterCreation>();
 
+        private static List<CharTemplate> availableClasses = new List<CharTemplate>
+        {
+            new CharTemplate("Fighter", 120, 30, 1),
+
+            new CharTemplate("Mage", 40, 70, 1),
+
+            new CharTemplate("Stealth", 60, 40, 1),
+
+        };
 
         static void Main(string[] args)
         {
