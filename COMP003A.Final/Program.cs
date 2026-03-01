@@ -23,7 +23,6 @@ namespace COMP003A.Final
                         CreateChar();
                         break;
                     case "2":
-                        Console.Clear();
                         Console.WriteLine("View all characters selected.");
                         
                         break;
@@ -131,8 +130,12 @@ namespace COMP003A.Final
 
             Console.WriteLine("\n New Character has been created.");
         }
-        static void Case2()
+        static void DisplayCharacter()
         {
+            Console.Clear();
+            Console.WriteLine("All available Characters:");
+            Console.WriteLine("");
+
 
         }
     }
