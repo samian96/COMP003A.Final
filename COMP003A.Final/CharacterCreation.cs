@@ -4,7 +4,7 @@ using System.Text;
 
 namespace COMP003A.Final
 {
-    internal class CharacterCreation
+    public class CharacterCreation
     {
         string Name;
 
@@ -34,6 +34,8 @@ namespace COMP003A.Final
         }
         public void DisplayCharacter()
         {
+            Console.WriteLine();
+
             Console.WriteLine("Name: " + Name);
 
             Console.WriteLine("Class: " + Classes);
@@ -45,6 +47,26 @@ namespace COMP003A.Final
             Console.WriteLine("MP: " + MP);
 
             Console.WriteLine("Level: " + Level);
+
+            Console.WriteLine();
+        }
+        public class CharTemplate
+        {
+            public string Name;
+
+            public int StartingHealth;
+
+            public int StartingMP;
+
+            public int StartingLevel;
+
+            public CharTemplate(string name, int health, int mp, int level)
+            {
+                Name = name;
+                StartingHealth = health;
+                StartingMP = mp;
+                StartingLevel = level;
+            }
         }
     }
 }

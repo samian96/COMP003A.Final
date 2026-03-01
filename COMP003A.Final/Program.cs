@@ -1,7 +1,12 @@
-﻿namespace COMP003A.Final
+﻿using System.Collections.Generic;
+
+namespace COMP003A.Final
 {
     internal class Program
     {
+        private static List<CharacterCreation> character = new List<CharacterCreation>();
+
+
         static void Main(string[] args)
         {
 
@@ -16,10 +21,11 @@
                 {
                     case "1":
                         Console.WriteLine("Create Character Selected.");
-                        Case1();
+                        CreateChar();
                         break;
                     case "2":
                         Console.WriteLine("View all characters selected.");
+                        
                         break;
                     case "3":
                         Console.WriteLine("View Character Stats Selected.");
@@ -43,7 +49,7 @@
             Console.WriteLine("1. Create Character: \n2. View All Characters: \n3: View Character Stats: \nRemove Character: \nExit Program:");
             Console.Write("Choose an option: ");
         }
-        static void Case1()
+        static void CreateChar()
         {
             Console.Clear();
             Console.WriteLine("Creating New Character");
@@ -88,6 +94,10 @@
 
             Console.WriteLine("Press enter to return to menu...");
             Console.ReadLine();
+
+        }
+        static void Case2()
+        {
 
         }
     }
