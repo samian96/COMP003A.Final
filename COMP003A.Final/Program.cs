@@ -102,22 +102,31 @@ namespace COMP003A.Final
             int mp = 0;
             int level = 1;
             int maxHealth = 0;
-            int currenthealth = 0;
+            int currentHealth = 0;
             int maxMP = 0;
             int currentMP = 0;
-            int strength = 0;
-            int dexterity = 0;
-            int defense = 0;
-            int intelligence = 0;
-            int wisdom = 0;
-            int speed = 0;
+            int strength = 10;
+            int dexterity = 10;
+            int defense = 10;
+            int intelligence = 10;
+            int wisdom = 10;
+            int speed = 10;
             int gold = 0;
+            int experience = 0;
 
             if (choice == 1)
             {
                 className = "Fighter";
                 health = 120;
                 mp = 30;
+                strength = 40;
+                defense = 30;
+                wisdom = 8;
+                speed = 15;
+                maxHealth = 120;
+                currentHealth = 120;
+                maxMP = 30;
+                currentMP = 30;
 
 
 
@@ -127,6 +136,15 @@ namespace COMP003A.Final
                 className = "Mage";
                 health = 40;
                 mp = 70;
+                strength = 5;
+                defense = 8;
+                wisdom = 25;
+                intelligence = 20;
+                maxHealth = 40;
+                currentHealth = 40;
+                maxMP = 70;
+                currentMP = 70;
+
 
             }
             else if ( choice == 3)
@@ -134,6 +152,15 @@ namespace COMP003A.Final
                 className = "Stealth";
                 health = 60;
                 mp = 40;
+                strength = 15;
+                defense = 15;
+                speed = 30;
+                dexterity = 20;
+                gold = 50;
+                maxHealth = 60;
+                currentHealth = 60;
+                maxMP = 40;
+                currentMP = 40;
 
             }
             CharacterCreation newChar = new CharacterCreation();
@@ -143,6 +170,18 @@ namespace COMP003A.Final
             newChar.Health = health;
             newChar.MP = mp;
             newChar.Level = 1;
+            newChar.MaxHealth = maxHealth;
+            newChar.CurrentHealth = currentHealth;
+            newChar.MaxMP = maxMP;
+            newChar.CurrentMP = currentMP;
+            newChar.Strength = strength;
+            newChar.Dexterity = dexterity;
+            newChar.Defense = defense;
+            newChar.Intelligence = intelligence;
+            newChar.Wisdom = wisdom;
+            newChar.Speed = speed;
+            newChar.Gold = gold;
+            newChar.Experience = experience;
 
 
 
@@ -195,6 +234,16 @@ namespace COMP003A.Final
 
                     character[i].Health = character[i].Health + 10;
                     character[i].MP = character[i].MP + 5;
+                    character[i].MaxHealth = character[i].MaxHealth + 10;
+                    character[i].MaxMP = character[i].MaxMP + 5;
+                    character[i].Strength = character[i].Strength + 5;
+                    character[i].Dexterity = character[i].Dexterity + 3;
+                    character[i].Defense = character[i].Defense + 5;
+                    character[i].Intelligence = character[i].Intelligence + 3;
+                    character[i].Wisdom = character[i].Wisdom + 2;
+                    character[i].Speed = character[i].Speed + 2;
+                    character[i].Gold = character[i].Gold + 15;
+                    character[i].Experience = character[i].Experience + 30;
 
                     Console.WriteLine("");
                     Console.WriteLine(character[i].Name + " Successfully Leveled Up! " + character[i].Level);
