@@ -179,7 +179,7 @@ namespace COMP003A.Final
                     character[i].MP = character[i].MP + 5;
 
                     Console.WriteLine("");
-                    Console.WriteLine(character[i].Name + "Successfully Leveled Up!" + character[i].Level);
+                    Console.WriteLine(character[i].Name + " Successfully Leveled Up! " + character[i].Level);
                     character[i].DisplayCharacter();
 
                     break;
@@ -187,7 +187,7 @@ namespace COMP003A.Final
                 if (found == false)
                 {
                     Console.WriteLine("");
-                    Console.WriteLine("Character" + findName + "was not found, please try again.");
+                    Console.WriteLine("Character " + findName + " was not found, please try again.");
                     Console.WriteLine("Use option 2 to view all characters, make sure name is spelled correctly.");
 
                 }
@@ -226,17 +226,15 @@ namespace COMP003A.Final
 
                 character.RemoveAt(i);
 
-                Console.WriteLine("Character: " + nameRemove + "Has been deleted.");
+                Console.WriteLine("Character: " + nameRemove + " Has been deleted.");
                 break;
             }
             if (found == false)
             {
-                Console.WriteLine("\nCharacter: " + nameRemove + "was not found.");
+                Console.WriteLine("\nCharacter: " + nameRemove + " was not found.");
                 Console.WriteLine("Use option 2 to view all charaacters and check spelling.");
             }
-            Console.WriteLine("");
-            Console.WriteLine("Press enter to continue.");
-            Console.ReadLine();
+
         }
     }
 }
