@@ -89,9 +89,9 @@ namespace COMP003A.Final
             Console.Write("Enter characters gender: ");
             string charGender = Console.ReadLine()?.Trim();
 
-            if (charAge == "" || charAge == null)
+            if (charGender == "" || charGender == null)
             {
-                charAge = "Unknown";
+                charGender = "Unknown";
             }
 
             Console.WriteLine();
@@ -101,7 +101,16 @@ namespace COMP003A.Final
             if (charHair == "" || charHair == null)
             {
                 charHair = "Bald";
-            } 
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("Enter characters eye color: ");
+            string charEyes = Console.ReadLine()?.Trim();
+
+            if (charEyes == "" || charEyes == null)
+            {
+                charEyes = "Hazel";
+            }
 
             Console.WriteLine("");
             Console.WriteLine("Choose your class");
@@ -208,6 +217,11 @@ namespace COMP003A.Final
             newChar.Speed = speed;
             newChar.Gold = gold;
             newChar.Experience = experience;
+            newChar.Age = charAge;
+            newChar.Gender = charGender;
+            newChar.HairColor = charHair;
+            newChar.EyeColor = charEyes;
+
 
 
 
