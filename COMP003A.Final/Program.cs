@@ -154,6 +154,15 @@ namespace COMP003A.Final
             Console.Clear();
             Console.WriteLine("Level Up A Character. \nPlease Choose a Character:");
             Console.WriteLine("");
+
+            if (character.Count == 0)
+            {
+                Console.WriteLine("No characters are available for leveling up. Please create a character in option 1 of main menu.");
+                return;
+            }
+            Console.Write("Enter the name of the character you wish to level up: ");
+            string findName = Console.ReadLine().Trim();
+
         }
     }
 }
