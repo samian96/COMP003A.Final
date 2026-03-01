@@ -27,7 +27,7 @@ namespace COMP003A.Final
                         DisplayCharacter();
                         break;
                     case "3":
-                        Console.WriteLine("View Character Stats Selected.");
+                        Console.WriteLine("Level Up Character.");
                         break;
                     case "4":
                         Console.WriteLine("Remove Character Selected.");
@@ -148,6 +148,12 @@ namespace COMP003A.Final
                     Console.WriteLine("");
                 }
             }
+        }
+        static void LevelUp()
+        {
+            Console.Clear();
+            Console.WriteLine("Level Up A Character. \nPlease Choose a Character:");
+            Console.WriteLine("");
         }
     }
 }
