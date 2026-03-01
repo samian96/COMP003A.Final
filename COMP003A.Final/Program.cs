@@ -24,7 +24,7 @@ namespace COMP003A.Final
                         break;
                     case "2":
                         Console.WriteLine("View all characters selected.");
-                        
+                        DisplayCharacter();
                         break;
                     case "3":
                         Console.WriteLine("View Character Stats Selected.");
@@ -136,7 +136,18 @@ namespace COMP003A.Final
             Console.WriteLine("All available Characters:");
             Console.WriteLine("");
 
-
+            if (character.Count == 0)
+            {
+                Console.WriteLine("No characters have been created. \nPlease choose optin 1 in Main Menu.");
+            }
+            else
+            {
+                foreach (CharacterCreation ch in character)
+                {
+                    ch.DisplayCharacter();
+                    Console.WriteLine("");
+                }
+            }
         }
     }
 }
