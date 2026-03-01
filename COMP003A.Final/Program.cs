@@ -163,6 +163,27 @@ namespace COMP003A.Final
             Console.Write("Enter the name of the character you wish to level up: ");
             string findName = Console.ReadLine().Trim();
 
+            bool found = false;
+            int i;
+
+            for (i = 0; < character.Count; i = i + 1)
+            {
+                if (character[i].Name == findName)
+                {
+                    found = true;
+
+                    character[i].Level = character[i].Level + 1;
+
+                    character[i].Health = character[i].Health + 10;
+                    character[i].MP = character[i].MP + 5;
+
+                    Console.WriteLine("");
+                    Console.WriteLine(character[i].Name + "Successfully Leveled Up!" + character[i].Level);
+                    character[i].DisplayCharacter();
+                }
+            }
+
+
         }
     }
 }
