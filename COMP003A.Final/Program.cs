@@ -28,6 +28,7 @@ namespace COMP003A.Final
                         break;
                     case "3":
                         Console.WriteLine("Level Up Character.");
+                        LevelUp();
                         break;
                     case "4":
                         Console.WriteLine("Remove Character Selected.");
@@ -51,7 +52,7 @@ namespace COMP003A.Final
         static void MenuDisplay()
         {
             Console.WriteLine("Character Creation Menu:");
-            Console.WriteLine("1. Create Character: \n2. View All Characters: \n3: View Character Stats: \nRemove Character: \nExit Program:");
+            Console.WriteLine("1. Create Character: \n2. View All Characters: \n3: Level Up Character: \n4: Remove Character: \nExit Program:");
             Console.Write("Choose an option: ");
         }
         static void CreateChar()
@@ -138,7 +139,7 @@ namespace COMP003A.Final
 
             if (character.Count == 0)
             {
-                Console.WriteLine("No characters have been created. \nPlease choose optin 1 in Main Menu.");
+                Console.WriteLine("No characters have been created. \nPlease choose option 1 in Main Menu.");
             }
             else
             {
@@ -164,9 +165,8 @@ namespace COMP003A.Final
             string findName = Console.ReadLine().Trim();
 
             bool found = false;
-            int i;
 
-            for (i = 0; < character.Count; i = i + 1)
+            for (int i = 0; i < character.Count; i = i + 1)
             {
                 if (character[i].Name == findName)
                 {
