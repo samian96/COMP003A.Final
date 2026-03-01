@@ -200,6 +200,22 @@ namespace COMP003A.Final
             Console.Clear();
             Console.WriteLine("Delete a Character");
             Console.WriteLine("");
+
+            if (character.Count == 0)
+            {
+                Console.WriteLine("Currently there are no existing characters");
+                Console.WriteLine("Please create a new character in option 1 in the main menu.");
+                Console.WriteLine("Press enter to continue..");
+                Console.ReadLine();
+                return;
+            }
+            Console.Write("Please enter the name of the character you would like to delete: ");
+            string nameRemove = Console.ReadLine().Trim();
+
+            bool found = false;
+            int i;
+
+
         }
     }
 }
