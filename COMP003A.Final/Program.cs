@@ -194,8 +194,12 @@ namespace COMP003A.Final
                 Console.WriteLine("Press enter to return to menu.");
                 Console.ReadLine();
             }
-
-
+        }
+        static void RemoveCharacter()
+        {
+            Console.Clear();
+            Console.WriteLine("Delete a Character");
+            Console.WriteLine("");
         }
     }
 }
