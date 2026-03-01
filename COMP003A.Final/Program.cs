@@ -23,6 +23,7 @@ namespace COMP003A.Final
                         CreateChar();
                         break;
                     case "2":
+                        Console.Clear();
                         Console.WriteLine("View all characters selected.");
                         
                         break;
@@ -118,6 +119,15 @@ namespace COMP003A.Final
                 health = 60;
                 mp = 40;
             }
+            CharacterCreation newChar = new CharacterCreation();
+            newChar.Name = charName;
+            newChar.ClassName = className;
+            newChar.Species = species;
+            newChar.Health = health;
+            newChar.MP = mp;
+            newChar.Level = 1;
+
+            character.Add(newChar);
 
             Console.WriteLine("\n New Character has been created.");
         }
