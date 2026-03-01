@@ -180,7 +180,19 @@ namespace COMP003A.Final
                     Console.WriteLine("");
                     Console.WriteLine(character[i].Name + "Successfully Leveled Up!" + character[i].Level);
                     character[i].DisplayCharacter();
+
+                    break;
                 }
+                if (found == false)
+                {
+                    Console.WriteLine("");
+                    Console.WriteLine("Character" + findName + "was not found, please try again.");
+                    Console.WriteLine("Use option 2 to view all characters, make sure name is spelled correctly.");
+
+                }
+                Console.WriteLine("");
+                Console.WriteLine("Press enter to return to menu.");
+                Console.ReadLine();
             }
 
 
