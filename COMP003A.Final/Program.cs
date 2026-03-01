@@ -101,24 +101,40 @@ namespace COMP003A.Final
             int health = 0;
             int mp = 0;
             int level = 1;
+            int maxHealth = 0;
+            int currenthealth = 0;
+            int maxMP = 0;
+            int currentMP = 0;
+            int strength = 0;
+            int dexterity = 0;
+            int defense = 0;
+            int intelligence = 0;
+            int wisdom = 0;
+            int speed = 0;
+            int gold = 0;
 
             if (choice == 1)
             {
                 className = "Fighter";
                 health = 120;
                 mp = 30;
+
+
+
             }
             else if (choice == 2)
             {
                 className = "Mage";
                 health = 40;
                 mp = 70;
+
             }
             else if ( choice == 3)
             {
                 className = "Stealth";
                 health = 60;
                 mp = 40;
+
             }
             CharacterCreation newChar = new CharacterCreation();
             newChar.Name = charName;
@@ -127,6 +143,8 @@ namespace COMP003A.Final
             newChar.Health = health;
             newChar.MP = mp;
             newChar.Level = 1;
+
+
 
             character.Add(newChar);
 
