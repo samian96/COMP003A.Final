@@ -215,7 +215,19 @@ namespace COMP003A.Final
             bool found = false;
             int i;
 
+            for (i = 0; i < character.Count; i = i+ 1)
+            {
+                found = true;
 
+                Console.WriteLine("");
+                Console.WriteLine("Character Found:" + character[i].DisplayCharacter);
+                Console.WriteLine("");
+
+                character.RemoveAt(i);
+
+                Console.WriteLine("Character: " + nameRemove + "Has been deleted.");
+                break;
+            }
         }
     }
 }
