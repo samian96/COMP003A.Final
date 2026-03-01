@@ -8,7 +8,7 @@ namespace COMP003A.Final
     {
         public string Name;
 
-        public string Classes;
+        public string ClassName;
 
         public string Species;
  
@@ -16,7 +16,7 @@ namespace COMP003A.Final
 
         public int MP;
 
-        public int Level;
+        public int Level = 1;
     
         public void DisplayCharacter()
         {
@@ -24,7 +24,7 @@ namespace COMP003A.Final
 
             Console.WriteLine("Name: " + Name);
 
-            Console.WriteLine("Class: " + Classes);
+            Console.WriteLine("Class: " + ClassName);
 
             Console.WriteLine("Species: " + Species);
 
@@ -38,22 +38,4 @@ namespace COMP003A.Final
         }
         
     }
-    public class CharTemplate
-      {
-        public string Name;
-
-        public int StartingHealth;
-
-        public int StartingMP;
-
-        public int StartingLevel;
-
-        public CharTemplate(string name, int health, int mp, int level)
-        {
-            Name = name;
-            StartingHealth = health;
-            StartingMP = mp;
-            StartingLevel = level;
-        }
-      }
-    }
+}

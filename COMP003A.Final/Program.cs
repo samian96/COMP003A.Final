@@ -6,16 +6,6 @@ namespace COMP003A.Final
     {
         private static List<CharacterCreation> character = new List<CharacterCreation>();
 
-        private static List<CharTemplate> availableClasses = new List<CharTemplate>
-        {
-            new CharTemplate("Fighter", 120, 30, 1),
-
-            new CharTemplate("Mage", 40, 70, 1),
-
-            new CharTemplate("Stealth", 60, 40, 1),
-
-        };
-
         static void Main(string[] args)
         {
 
@@ -49,6 +39,12 @@ namespace COMP003A.Final
                     default:
                         Console.WriteLine("Invalid input, please try again.");
                         break;
+                }
+                if (running)
+                {
+                    Console.WriteLine("\n Press enter to continue.");
+                    Console.ReadLine();
+                    Console.Clear();
                 }
             }
         }
@@ -123,6 +119,7 @@ namespace COMP003A.Final
                 mp = 40;
             }
 
+            Console.WriteLine("\n New Character has been created.");
         }
         static void Case2()
         {
