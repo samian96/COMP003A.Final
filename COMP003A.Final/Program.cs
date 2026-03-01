@@ -73,39 +73,55 @@ namespace COMP003A.Final
             }
 
             Console.WriteLine("Enter species: ");
-            string species = Console.ReadLine()?.Trim();
-            if (string.IsNullOrEmpty(species))
+            string species = Console.ReadLine();
+            if (species == "" || species == null)
             {
-                species = "Unkown";
+                species = "Unknown";
             }
 
+            Console.WriteLine("");
+            Console.WriteLine("Choose your class");
+            Console.WriteLine("1. Fighter/ HP:120/ MP:30");
+            Console.WriteLine("2. Mage/ HP:40/ MP:70");
+            Console.WriteLine("3. Stealth/ HP:60/ MP:40");
 
-            string charChoice = Console.ReadLine()?.Trim();
+            Console.Write("Enter choice 1-3: ");
+            string charChoice = Console.ReadLine();
 
-            string charClasses; 
-
-            switch (charChoice)
+            int choice = 0;
+            if(int.TryParse(charChoice, out choice) == false)
             {
-                case "1":
-                    charClasses = "Fighter";
-                    break;
-                case "2":
-                    charClasses = "Mage";
-                    break;
-                case "3":
-                    charClasses = "Stealth";
-                    break;
-                default:
-                    Console.WriteLine("\n Invalid choice. Please try again.");
-                    Console.ReadLine();
+                Console.WriteLine("Incorrect choice, try again.");
+                return;
+            }
+            if (choice < 1 || choice > 3 )
+            {
+                Console.WriteLine("Invalid choice, please enter 1-3.");
                     return;
             }
-            // success path
-            Console.WriteLine("\n Character created.");
-            Console.WriteLine($"Name: {charName}\nClass: {charClasses}");
+            string className = "";
+            int health = 0;
+            int mp = 0;
+            int level = 1;
 
-            Console.WriteLine("Press enter to return to menu...");
-            Console.ReadLine();
+            if (choice == 1)
+            {
+                className = "Fighter";
+                health = 120;
+                mp = 30;
+            }
+            else if (choice == 2)
+            {
+                className = "Mage";
+                health = 40;
+                mp = 70;
+            }
+            else if ( choice == 3)
+            {
+                className = "Stealth";
+                health = 60;
+                mp = 40;
+            }
 
         }
         static void Case2()
