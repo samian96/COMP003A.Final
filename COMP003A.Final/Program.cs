@@ -53,7 +53,7 @@ namespace COMP003A.Final
         static void MenuDisplay()
         {
             Console.WriteLine("Character Creation Menu:");
-            Console.WriteLine("1. Create Character: \n2. View All Characters: \n3: Level Up Character: \n4: Remove Character: \nExit Program:");
+            Console.WriteLine("1. Create Character: \n2. View All Characters: \n3: Level Up Character: \n4: Remove Character: \n5. Exit Program:");
             Console.Write("Choose an option: ");
         }
         static void CreateChar()
