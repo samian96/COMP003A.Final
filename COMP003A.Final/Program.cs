@@ -336,6 +336,8 @@ namespace COMP003A.Final
             
 
         }
+
+        // Level up goes through the chosen character and adds to its int level by pre determined numbers. 
         static void LevelUp()
         {
             Console.Clear();

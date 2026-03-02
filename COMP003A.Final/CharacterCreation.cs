@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace COMP003A.Final
-{
+{ // This Class is outside of the program to lesson the load where the main method is, and is called to when adding to the list for a new character, or leveling up the character.
     public class CharacterCreation
     {
         // main class customization
