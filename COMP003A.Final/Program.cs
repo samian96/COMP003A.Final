@@ -148,6 +148,8 @@ namespace COMP003A.Final
             int speed = 10;
             int gold = 0;
             int experience = 0;
+            string weapon = "none";
+            string armor = "none";
 
             if (choice == 1)
             {
@@ -162,6 +164,8 @@ namespace COMP003A.Final
                 currentHealth = 120;
                 maxMP = 30;
                 currentMP = 30;
+                weapon = "Great Sword";
+                armor = "Half Plated Suit of Armor";
 
 
 
@@ -179,6 +183,8 @@ namespace COMP003A.Final
                 currentHealth = 40;
                 maxMP = 70;
                 currentMP = 70;
+                weapon = "Large Oak Staff";
+                armor = "Garmet Robe";
 
 
             }
@@ -196,6 +202,8 @@ namespace COMP003A.Final
                 currentHealth = 60;
                 maxMP = 40;
                 currentMP = 40;
+                weapon = "Curved Dagger";
+                armor = "Lightweight Cloak";
 
             }
             CharacterCreation newChar = new CharacterCreation();
@@ -221,6 +229,8 @@ namespace COMP003A.Final
             newChar.Gender = charGender;
             newChar.HairColor = charHair;
             newChar.EyeColor = charEyes;
+            newChar.Weapon = weapon;
+            newChar.Armor = armor;
 
 
 
