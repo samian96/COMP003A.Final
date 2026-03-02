@@ -13,9 +13,10 @@ namespace COMP003A.Final
 
             while (running)
             {
+                
                 MenuDisplay();
                 string userInput = Console.ReadLine()?.Trim(); ;
-
+                // The switches will trigger depending on the users input, and will jump to method depending on which case has been chosen.
                 try
                 {
                     switch (userInput)
@@ -60,6 +61,7 @@ namespace COMP003A.Final
                 }
             }
         }
+        // Menu display is a method the main will call to to display the menu information, keeps the main method less cluttered and helps the program run better as well as more managable.
         static void MenuDisplay()
         {
             Console.WriteLine("Character Creation Menu:");
@@ -74,7 +76,7 @@ namespace COMP003A.Final
 
             Console.Write("Please enter your characters name: ");
             string charName = Console.ReadLine()?.Trim();
-
+            // try catch as a safety protocol just incase the users input was not valid to prevent unwanted bugs or crashes from happening.
             try
             {
                 if (string.IsNullOrEmpty(charName))
@@ -92,6 +94,7 @@ namespace COMP003A.Final
                 Console.WriteLine("Returning to menu.");
                 return;
             }
+            // This section of the method goes through all the different character choices, displays and allows users to input what they decide as well as choose a class for their character. Implements mostly if statements.
             Console.WriteLine("Welcome," + charName + "!");
 
             Console.WriteLine("Enter species: ");
@@ -174,7 +177,7 @@ namespace COMP003A.Final
             int experience = 0;
             string weapon = "none";
             string armor = "none";
-
+            // this section of the character creation has specific options to choose from for the class, if else if has been used for the specific choices over a switch.
             if (choice == 1)
             {
                 className = "Fighter";
@@ -230,6 +233,7 @@ namespace COMP003A.Final
                 armor = "Lightweight Cloak";
 
             }
+            // This section stores the new data of the character created into a list that we can go back and check on to see the full stats.
             CharacterCreation newChar = new CharacterCreation();
             newChar.Name = charName;
             newChar.ClassName = className;
@@ -263,6 +267,7 @@ namespace COMP003A.Final
 
             Console.WriteLine("\n New Character has been created.");
         }
+        // This method if chosen will display characters that have been created in the program, checks the list using if else, and a foreach to go through the list.
         static void DisplayCharacter()
         {
             Console.Clear();
@@ -282,6 +287,7 @@ namespace COMP003A.Final
                 }
             }
         }
+        // this method is for leveling up the stats of the created characters, it checks the attributes of the character chosen and adds the experience points to each section of the character. Updates the values of the character on the list.
         static void LevelUp()
         {
             Console.Clear();
@@ -337,6 +343,7 @@ namespace COMP003A.Final
                 Console.ReadLine();
             }
         }
+        // This section is the logic for removing an item that has been added onto the list, it erases all the data of that character and will not be displayed on the character menu.
         static void RemoveCharacter()
         {
             Console.Clear();
