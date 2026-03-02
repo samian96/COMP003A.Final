@@ -388,9 +388,6 @@ namespace COMP003A.Final
                         Console.WriteLine("");
                         Console.WriteLine("Character " + findName + " was not found, please try again.");
                         Console.WriteLine("Use option 2 to view all characters, make sure name is spelled correctly.");
-
-                    } else
-                    {
                         Console.WriteLine("");
                         Console.WriteLine("Press enter to return to menu.");
                         Console.ReadLine();
@@ -401,44 +398,43 @@ namespace COMP003A.Final
         }
         // This section is the logic for removing an item that has been added onto the list, it erases all the data of that character and will not be displayed on the character menu.
         static void RemoveCharacter()
-        {
-            Console.Clear();
-            Console.WriteLine("Delete a Character");
-            Console.WriteLine("");
-
-            if (character.Count == 0)
             {
-                Console.WriteLine("Currently there are no existing characters");
-                Console.WriteLine("Please create a new character in option 1 in the main menu.");
-                Console.WriteLine("Press enter to continue..");
-                Console.ReadLine();
-                return;
-            }
-            Console.Write("Please enter the name of the character you would like to delete: ");
-            string nameRemove = Console.ReadLine().Trim();
-
-            bool found = false;
-            int i;
-
-            for (i = 0; i < character.Count; i = i+ 1)
-            {
-                found = true;
-
-                Console.WriteLine("");
-                Console.WriteLine("Character Found:" + character[i].DisplayCharacter);
+                Console.Clear();
+                Console.WriteLine("Delete a Character");
                 Console.WriteLine("");
 
-                character.RemoveAt(i);
+                if (character.Count == 0)
+                {
+                    Console.WriteLine("Currently there are no existing characters");
+                    Console.WriteLine("Please create a new character in option 1 in the main menu.");
+                    Console.WriteLine("Press enter to continue..");
+                    Console.ReadLine();
+                    return;
+                }
+                Console.Write("Please enter the name of the character you would like to delete: ");
+                string nameRemove = Console.ReadLine().Trim();
 
-                Console.WriteLine("Character: " + nameRemove + " Has been deleted.");
-                break;
-            }
-            if (found == false)
-            {
-                Console.WriteLine("\nCharacter: " + nameRemove + " was not found.");
-                Console.WriteLine("Use option 2 to view all charaacters and check spelling.");
-            }
+                bool found = false;
+                int i;
 
+                for (i = 0; i < character.Count; i = i + 1)
+                {
+                    found = true;
+
+                    Console.WriteLine("");
+                    Console.WriteLine("Character Found:" + character[i].DisplayCharacter);
+                    Console.WriteLine("");
+
+                    character.RemoveAt(i);
+
+                    Console.WriteLine("Character: " + nameRemove + " Has been deleted.");
+                    break;
+                }
+                if (found == false)
+                {
+                    Console.WriteLine("\nCharacter: " + nameRemove + " was not found.");
+                    Console.WriteLine("Use option 2 to view all charaacters and check spelling.");
+                }
         }
     }
 }
