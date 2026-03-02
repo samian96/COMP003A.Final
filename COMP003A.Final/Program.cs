@@ -16,31 +16,41 @@ namespace COMP003A.Final
                 MenuDisplay();
                 string userInput = Console.ReadLine()?.Trim(); ;
 
-                switch (userInput)
+                try
                 {
-                    case "1":
-                        Console.WriteLine("Create Character Selected.");
-                        CreateChar();
-                        break;
-                    case "2":
-                        Console.WriteLine("View all characters selected.");
-                        DisplayCharacter();
-                        break;
-                    case "3":
-                        Console.WriteLine("Level Up Character.");
-                        LevelUp();
-                        break;
-                    case "4":
-                        Console.WriteLine("Remove Character Selected.");
-                        RemoveCharacter();
-                        break;
-                    case "5":
-                        Console.WriteLine("Exiting Program.");
-                        running = false;
-                        break;
-                    default:
-                        Console.WriteLine("Invalid input, please try again.");
-                        break;
+                    switch (userInput)
+                    {
+                        case "1":
+                            Console.WriteLine("Create Character Selected.");
+                            CreateChar();
+                            break;
+                        case "2":
+                            Console.WriteLine("View all characters selected.");
+                            DisplayCharacter();
+                            break;
+                        case "3":
+                            Console.WriteLine("Level Up Character.");
+                            LevelUp();
+                            break;
+                        case "4":
+                            Console.WriteLine("Remove Character Selected.");
+                            RemoveCharacter();
+                            break;
+                        case "5":
+                            Console.WriteLine("Exiting Program.");
+                            running = false;
+                            break;
+                        default:
+                            Console.WriteLine("Invalid input, please try again.");
+                            break;
+                    }
+                }
+                // should display an error code if caught, and resume the program. Though I think the validation is taking over for the most part.
+                catch (Exception e)
+                {
+                    Console.WriteLine("Unexpected error has occured.");
+                    Console.WriteLine("Error:" + e.Message);
+                    Console.WriteLine("The program should return to normal.");
                 }
                 if (running)
                 {
