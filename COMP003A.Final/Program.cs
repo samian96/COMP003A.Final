@@ -304,17 +304,34 @@ namespace COMP003A.Final
             int sumLevel = 0;
             int sumHealth = 0;
             int sumMP = 0;
-
-            for (int i = 0; i < character.Count; i++)
+            int i = 0;
+            while (i < character.Count) 
             {
-                sumLevel += character[i].Level;
-                sumHealth += character[i].Health;
-                sumMP += character[i].MP;
+                sumLevel = sumLevel + character[i].Level;
+                sumHealth = sumLevel + character[i].Health;
+                sumMP = sumMP + character[i].MP;
+
+                i = i + 1;
             }
 
             double averageLevel = (double)sumLevel / character.Count;
             double averageHealth = (double)sumHealth / character.Count;
             double averageMP = (double)sumMP / character.Count;
+
+            Console.Clear();
+            Console.WriteLine("Party Summary");
+            Console.WriteLine("");
+            Console.WriteLine("Number of Adventurers: " + character.Count);
+            Console.WriteLine("Total Level: " + sumLevel);
+            Console.WriteLine("Total Health: " + sumHealth);
+            Console.WriteLine("Total MP: " + sumMP);
+            Console.WriteLine("");
+            Console.WriteLine("Average Level: " + averageLevel);
+            Console.WriteLine("Average Health: " + averageHealth);
+            Console.WriteLine("Average MP: " + averageMP);
+            Console.WriteLine("");
+            Console.WriteLine("Press enter to return to menu.");
+            Console.ReadLine();
             
 
         }
