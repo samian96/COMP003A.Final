@@ -30,14 +30,17 @@ namespace COMP003A.Final
                             DisplayCharacter();
                             break;
                         case "3":
+                            Console.WriteLine("Character Party Summary.");
+                            break;
+                        case "4":
                             Console.WriteLine("Level Up Character.");
                             LevelUp();
                             break;
-                        case "4":
+                        case "5":
                             Console.WriteLine("Remove Character Selected.");
                             RemoveCharacter();
                             break;
-                        case "5":
+                        case "6":
                             Console.WriteLine("Exiting Program.");
                             running = false;
                             break;
@@ -65,7 +68,7 @@ namespace COMP003A.Final
         static void MenuDisplay()
         {
             Console.WriteLine("Character Creation Menu:");
-            Console.WriteLine("1. Create Character: \n2. View All Characters: \n3: Level Up Character: \n4: Remove Character: \n5. Exit Program:");
+            Console.WriteLine("1. Create Character: \n2. View All Characters: \n3: Character Party Summary: \n4: Level Up Character: \n5. Remove Character: \n6: Exit Program:");
             Console.Write("Choose an option: ");
         }
         static void CreateChar()
@@ -288,6 +291,14 @@ namespace COMP003A.Final
             }
         }
         // this method is for leveling up the stats of the created characters, it checks the attributes of the character chosen and adds the experience points to each section of the character. Updates the values of the character on the list.
+        static void PartySummary()
+        {
+            if (character.Count == 0)
+            {
+                Console.WriteLine("No characters available for party. Please create one..");
+                return;
+            }
+        }
         static void LevelUp()
         {
             Console.Clear();
