@@ -31,6 +31,7 @@ namespace COMP003A.Final
                             break;
                         case "3":
                             Console.WriteLine("Character Party Summary.");
+                            PartySummary();
                             break;
                         case "4":
                             Console.WriteLine("Level Up Character.");
@@ -346,49 +347,55 @@ namespace COMP003A.Final
                 Console.WriteLine("No characters are available for leveling up. Please create a character in option 1 of main menu.");
                 return;
             }
-            Console.Write("Enter the name of the character you wish to level up: ");
-            string findName = Console.ReadLine().Trim();
-
-            bool found = false;
-
-            for (int i = 0; i < character.Count; i = i + 1)
+            else
             {
-                if (character[i].Name == findName)
+                Console.Write("Enter the name of the character you wish to level up: ");
+                string findName = Console.ReadLine().Trim();
+
+                bool found = false;
+
+                for (int i = 0; i < character.Count; i = i + 1)
                 {
-                    found = true;
+                    if (character[i].Name == findName)
+                    {
+                        found = true;
 
-                    character[i].Level = character[i].Level + 1;
+                        character[i].Level = character[i].Level + 1;
 
-                    character[i].Health = character[i].Health + 10;
-                    character[i].MP = character[i].MP + 5;
-                    character[i].MaxHealth = character[i].MaxHealth + 10;
-                    character[i].MaxMP = character[i].MaxMP + 5;
-                    character[i].Strength = character[i].Strength + 5;
-                    character[i].Dexterity = character[i].Dexterity + 3;
-                    character[i].Defense = character[i].Defense + 5;
-                    character[i].Intelligence = character[i].Intelligence + 3;
-                    character[i].Wisdom = character[i].Wisdom + 2;
-                    character[i].Speed = character[i].Speed + 2;
-                    character[i].Gold = character[i].Gold + 15;
-                    character[i].Experience = character[i].Experience + 30;
+                        character[i].Health = character[i].Health + 10;
+                        character[i].MP = character[i].MP + 5;
+                        character[i].MaxHealth = character[i].MaxHealth + 10;
+                        character[i].MaxMP = character[i].MaxMP + 5;
+                        character[i].Strength = character[i].Strength + 5;
+                        character[i].Dexterity = character[i].Dexterity + 3;
+                        character[i].Defense = character[i].Defense + 5;
+                        character[i].Intelligence = character[i].Intelligence + 3;
+                        character[i].Wisdom = character[i].Wisdom + 2;
+                        character[i].Speed = character[i].Speed + 2;
+                        character[i].Gold = character[i].Gold + 15;
+                        character[i].Experience = character[i].Experience + 30;
 
-                    Console.WriteLine("");
-                    Console.WriteLine(character[i].Name + " Successfully Leveled Up! " + character[i].Level);
-                    character[i].DisplayCharacter();
+                        Console.WriteLine("");
+                        Console.WriteLine(character[i].Name + " Successfully Leveled Up! " + character[i].Level);
+                        character[i].DisplayCharacter();
 
-                    break;
+                        break;
+                    }
+                    else if (found == false)
+                    {
+                        Console.WriteLine("");
+                        Console.WriteLine("Character " + findName + " was not found, please try again.");
+                        Console.WriteLine("Use option 2 to view all characters, make sure name is spelled correctly.");
+
+                    } else
+                    {
+                        Console.WriteLine("");
+                        Console.WriteLine("Press enter to return to menu.");
+                        Console.ReadLine();
+                    }
                 }
-                if (found == false)
-                {
-                    Console.WriteLine("");
-                    Console.WriteLine("Character " + findName + " was not found, please try again.");
-                    Console.WriteLine("Use option 2 to view all characters, make sure name is spelled correctly.");
-
-                }
-                Console.WriteLine("");
-                Console.WriteLine("Press enter to return to menu.");
-                Console.ReadLine();
             }
+
         }
         // This section is the logic for removing an item that has been added onto the list, it erases all the data of that character and will not be displayed on the character menu.
         static void RemoveCharacter()
