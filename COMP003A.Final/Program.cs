@@ -298,6 +298,14 @@ namespace COMP003A.Final
                 Console.WriteLine("No characters available for party. Please create one..");
                 return;
             }
+            int totalHP = 0;
+            int totalMP = 0;
+            int totalLevel = 0;
+            int totalGold = 0;
+            int totalAlive = 0;
+            CharacterCreation strongest = character[0];
+            CharacterCreation richest = character[0];
+
         }
         static void LevelUp()
         {
