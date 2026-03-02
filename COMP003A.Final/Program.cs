@@ -296,15 +296,26 @@ namespace COMP003A.Final
             if (character.Count == 0)
             {
                 Console.WriteLine("No characters available for party. Please create one..");
+                Console.WriteLine("Press enter to return.");
+                Console.ReadLine();
                 return;
             }
-            int totalHP = 0;
-            int totalMP = 0;
-            int totalLevel = 0;
-            int totalGold = 0;
-            int totalAlive = 0;
-            CharacterCreation strongest = character[0];
-            CharacterCreation richest = character[0];
+
+            int sumLevel = 0;
+            int sumHealth = 0;
+            int sumMP = 0;
+
+            for (int i = 0; i < character.Count; i++)
+            {
+                sumLevel += character[i].Level;
+                sumHealth += character[i].Health;
+                sumMP += character[i].MP;
+            }
+
+            double averageLevel = (double)sumLevel / character.Count;
+            double averageHealth = (double)sumHealth / character.Count;
+            double averageMP = (double)sumMP / character.Count;
+            
 
         }
         static void LevelUp()
