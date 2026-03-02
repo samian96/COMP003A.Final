@@ -71,14 +71,28 @@ namespace COMP003A.Final
             Console.Clear();
             Console.WriteLine("Creating New Character");
 
+
             Console.Write("Please enter your characters name: ");
             string charName = Console.ReadLine()?.Trim();
 
-            if (string.IsNullOrEmpty(charName))
+            try
             {
-                Console.WriteLine("Invalid name, name requires one character, returning to menu.");
+                if (string.IsNullOrEmpty(charName))
+                {
+                    throw new ArgumentException("Name can not be empty, please enter a valid name.");
+                }
+                if (charName.Length < 2)
+                {
+                    throw new ArgumentException("Name must be at minimum 3 characters long.");
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Unexpected error." + e.Message);
+                Console.WriteLine("Returning to menu.");
                 return;
             }
+            Console.WriteLine("Welcome," + charName + "!");
 
             Console.WriteLine("Enter species: ");
             string species = Console.ReadLine();
