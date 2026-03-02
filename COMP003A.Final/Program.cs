@@ -383,15 +383,15 @@ namespace COMP003A.Final
 
                         break;
                     }
-                    else if (found == false)
-                    {
-                        Console.WriteLine("");
-                        Console.WriteLine("Character " + findName + " was not found, please try again.");
-                        Console.WriteLine("Use option 2 to view all characters, make sure name is spelled correctly.");
-                        Console.WriteLine("");
-                        Console.WriteLine("Press enter to return to menu.");
-                        Console.ReadLine();
-                    }
+                }
+                if (found == false)
+                {
+                    Console.WriteLine("");
+                    Console.WriteLine("Character " + findName + " was not found, please try again.");
+                    Console.WriteLine("Use option 2 to view all characters, make sure name is spelled correctly.");
+                    Console.WriteLine("");
+                    Console.WriteLine("Press enter to return to menu.");
+                    Console.ReadLine();
                 }
             }
 
